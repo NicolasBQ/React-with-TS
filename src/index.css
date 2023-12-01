@@ -5,6 +5,37 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: grid;
+  place-content: center;
+}
+
+img {
+  border-radius: 200px;
+  height: 50px;
+  width: auto;
+}
+
+ul h4 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border-radius: 4px;
+  border: 1px solid #eee;
+  max-width: 320px;
+  list-style: none;
+  margin-bottom: 1rem;
+  padding: 0.5rem 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin-bottom: 0.5rem;
 }
 
 code {
