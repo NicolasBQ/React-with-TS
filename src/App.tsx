@@ -24,14 +24,14 @@ function App() {
   const [subs, setSubs] = React.useState<AppState['subs']>(INITIAL_STATE);
 
   
-  // const handleNewSub = (newSub: Sub):void => {
-  //   setSubs(subs => [...subs, newSub]);
-  // }
+  const handleNewSub = (newSub: Sub):void => {
+    setSubs(subs => [...subs, newSub]);
+  }
 
   return (
     <div className="App">
       <List subs={subs}/>
-      <Form onNewSub={setSubs}/>
+      <Form onNewSub={handleNewSub}/>
     </div>
   );
 }
