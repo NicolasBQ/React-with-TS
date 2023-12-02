@@ -22,14 +22,14 @@ interface AppState {
 
 function App() {
   const [subs, setSubs] = React.useState<AppState['subs']>(INITIAL_STATE);
-
+  const divRef = React.useRef<HTMLDivElement>(null);
   
   const handleNewSub = (newSub: Sub):void => {
-    setSubs(subs => [...subs, newSub]);
+    setSubs(subs => [...subs, newSub]); 
   }
 
   return (
-    <div className="App">
+    <div className="App" ref={divRef}>
       <List subs={subs}/>
       <Form onNewSub={handleNewSub}/>
     </div>
